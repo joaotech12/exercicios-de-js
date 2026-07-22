@@ -49,3 +49,77 @@ if (numero % 5 == 0) {
 if (numero % 3 != 0 && numero % 5 != 0) {
     console.log("Não é múltiplo de 3 nem de 5.");
 }
+
+
+//exercicios da ultima aula, n esquecer de subir pro git os proximos 
+const valorTexto = prompt("Digite o valor do empréstimo:");
+const valor = parseFloat(valorTexto);
+
+const parcelasTexto = prompt("Digite o número de parcelas:");
+const parcelas = parseInt(parcelasTexto);
+
+const jurosTexto = prompt("Digite os juros ao mês (%):");
+const juros = parseFloat(jurosTexto);
+
+if (juros < 5) {
+
+    console.log("Os juros devem ser no mínimo 5% ao mês.");
+
+} else {
+
+    const taxa = juros / 100;
+
+    const valorFinal = valor + (valor * taxa * parcelas);
+
+    const valorParcela = valorFinal / parcelas;
+
+    console.log("Valor final do empréstimo: R$ " + valorFinal.toFixed(2));
+    console.log("Valor de cada parcela: R$ " + valorParcela.toFixed(2));
+    console.log("Número de parcelas: " + parcelas);
+
+}
+
+//palavra invertida e vogais 
+const palavra = prompt("Digite uma palavra:");
+const tamanho = palavra.length;
+
+let vogais = 0;
+for (let i = 0; i < palavra.length; i++) {
+
+const letra = palavra[i].toLowerCase();
+
+    if (
+        letra == "a" ||
+        letra == "e" ||
+        letra == "i" ||
+        letra == "o" ||
+        letra == "u"
+    ) {
+        vogais++;
+    }
+
+}
+
+let invertida = "";
+for (let i = palavra.length - 1; i >= 0; i--) {
+
+    invertida += palavra[i];
+
+}
+
+console.log("Tamanho da palavra: " + tamanho);
+console.log("Número de vogais: " + vogais);
+console.log("Palavra invertida: " + invertida);
+
+
+
+
+
+
+
+
+
+
+
+
+
